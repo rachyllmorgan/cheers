@@ -10,6 +10,11 @@ namespace Cheers
     {
         static void Main(string[] args)
         {
+            NameCheer();
+        }
+
+        private static void NameCheer()
+        {
             System.Console.WriteLine("Hello there! What's your name?");
             string name = System.Console.ReadLine();
             System.Console.WriteLine("Hi, " + name);
@@ -28,6 +33,11 @@ namespace Cheers
                 }
             }
             System.Console.WriteLine(name.ToUpper() + " is GRAND!");
+            BirthdayCheer(name);
+        }
+
+        private static void BirthdayCheer(string name)
+        {
             System.Console.WriteLine("Hey, " + name + ", what’s your birthday? (MM / DD");
             DateTime birthdate = DateTime.Parse(System.Console.ReadLine());
             DateTime today = DateTime.Today;
